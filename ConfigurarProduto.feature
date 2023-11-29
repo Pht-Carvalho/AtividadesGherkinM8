@@ -21,7 +21,7 @@
             | Preto  | P       | 1          | "Efetuar Compra" |
             | Branco | M       | 3          | "Efetuar Compra" |
             | Azul   | G       | 5          | "Efetuar Compra" |
-            | Verde  | GG      | 10         | "Efetuar Compra" |
+            | Verde  | GG      | 15         | "Quantidade limite excedida" |
 
             Cenário: Configuração com quantidade maior que 10
             Quando eu selecionar cor "Preto"
@@ -29,16 +29,7 @@
             E quantidade 20
             Então deve aparecer a mensagem "A quantidade máxima de produtos por compra é de 10 unidades"
 
-            Esquema do Cenário: Limpar configuração realizada
-            Quando eu selecionar <COR>
-            E <tamanho>
-            E <quantidade>
+            Cenário: Limpar configuração realizada
+            Quando eu selecionar o produto
             E clicar em "Limpar"
             Então o produto deve retornar ao estado padrão
-           
-            Exemplos:
-            | cor    | tamanho | quantidade |
-            | Preto  | P       | 1          |
-            | Branco | M       | 3          |
-            | Azul   | G       | 5          |
-            | Verde  | GG      | 10         |
