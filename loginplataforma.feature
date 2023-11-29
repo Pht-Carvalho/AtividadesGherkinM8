@@ -21,5 +21,5 @@
 
             Exemplos:
             | usuario                     | senha            | mensagem                     |
-            | "emailInvalido@ebac.com.br" | "Senha123!"      | "Usuário ou senha inválidos" |
+            | "emailInvalido@eb@ac.com.br" | "Senha123!"      | "Usuário ou senha inválidos" |
             | "joao@email.com.br"         | "Senha@1nvalida" | "Usuário ou senha inválidos" |
