@@ -9,17 +9,16 @@
             Contexto:
             Dado que eu acesse a página de autenticação do EBAC-SHOP
 
-            Cenário: Autenticação válida
-            Quando eu digitar o usuário "joao@email.com.br"
-            E a senha "Senha123!"
-            Então deve exibir uma mensagem de boas vindas "Olá, João!"
-
-            Esquema do Cenário: Autenticação Inválida
-            Quando eu digitar o <usuario>
-            E a <senha>
-            Então deve exibir a <mensagem> de sucesso
-
+            Esquema do Cenário: Autenticação válida
+            Quando eu digitar o usuário <usuario>
+            E a senha <senha>
+            Então deve exibir a <mensagem> de boas vindas
+            
             Exemplos:
             | usuario                     | senha            | mensagem                     |
-            | "emailInvalido@eb@ac.com.br" | "Senha123!"      | "Usuário ou senha inválidos" |
-            | "joao@email.com.br"         | "Senha@1nvalida" | "Usuário ou senha inválidos" |
+            | "joao@email.com.br"         | "Senha123!"      | "Olá, João!" |
+            | "maria@ebacmail.com.br"      | "Senha@5484"     | "Olá, Maria" |
+            
+            Cenário: Autenticação Inválida
+            Quando eu digitar um email com formato inválido
+            Então deve exibir a <mensagem> de falha no login
